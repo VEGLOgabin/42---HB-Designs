@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="A modern, clean and simple template created for Manufacturers on the AMP Platform" name="description"/>
+  <meta content="Kim Buckley for AMP" name="author"/>
+  <title>
+   HB Designs | Catalog
+  </title>
+  <!-- Favicon-->
+  <link href="/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- Support CSS-->
+  <link crossorigin="anonymous" href="https://kit.fontawesome.com/acce31dbbc.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+  <!-- Theme CSS -->
+  <link href="/css/styles.css" rel="stylesheet"/>
+  <!-- JQUERY -->
+  <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js">
+  </script>
+  <style>
+   #logo.sm-logo{ 
+height: 45px;
+}
+
+.form-group:nth-child(4)::before{
+  content: "City and State and Message*" ;
+  position: absolute;
+  line-height: 20px;
+        margin-top: 10px;
+  padding-left: 16px;
+  color: #504e4e;
+}
+.form-group textarea#message::placeholder{
+  color: transparent;
+}
+#twitterLink, #linkedinLink, #pinterestLink { display: none;}
+  </style>
+ </head>
+ <body>
+  <!-- Responsive navbar-->
+  <header>
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+     <a class="navbar-brand" href="/">
+      <img alt="HB Designs Logo" class="logo img-fluid" id="logo" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/0/0/21886/1dcdc216ec3a5ae813d2d09317fb8f967b7f8a169df14/amptab_logo.jpg"/>
+     </a>
+     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Start Admin Nav -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+       <li class="nav-item">
+        <a class="nav-link" href="/" target="_self">
+         Home
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/about.html" target="_self">
+         About
+        </a>
+       </li>
+       <li class="nav-item dropdown">
+        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-hover="dropdown" href="/catalog" role="button">
+         Products
+        </a>
+        <ul aria-labelledby="navbarDropdown" class="dropdown-menu product-nav">
+         <div id="columns">
+          <div class="column">
+           <div class="column-name">
+            Category
+           </div>
+           <div class="values">
+            <div class="value">
+             <a href="/catalog?filter_Category=Accent%20Tables">
+              Accent Tables
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=BARSTOOLS">
+              BARSTOOLS
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=BEDS">
+              BEDS
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=BENCHES">
+              BENCHES
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=Chairs">
+              Chairs
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=Fabric">
+              Fabric
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=In%20Stock%20Program">
+              In Stock Program
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=Leg%20Finish">
+              Leg Finish
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=Nail%20Finishes">
+              Nail Finishes
+             </a>
+            </div>
+            <div class="value">
+             <a href="/catalog?filter_Category=Parsons%20Chairs">
+              Parsons Chairs
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </ul>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/contact.html" target="_self">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Page content-->
+  <main>
+   <!-- Products Section -->
+   <section class="container-fluid" id="products">
+    <!-- Page Content -->
+    <div class="row">
+     <div class="mars">
+      <link href="https://cms.amptab.com/Content/css/MarsVersion3.css?bustCache=55" rel="stylesheet">
+       <style>
+        .tile .image {
+        object-fit: contain;
+    }
+       </style>
+       <script defer="" src="https://cms.amptab.com/Scripts/MarsVersion3.js?bustCache=55">
+       </script>
+       <span style="color: red">
+        <div class="validation-summary-valid" data-valmsg-summary="true">
+         <ul>
+          <li style="display:none">
+          </li>
+         </ul>
+        </div>
+       </span>
+       <div class="container-fluid">
+        <div class="row">
+         <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+          <form id="filter-form">
+           <div class="input-group mb-3">
+            <span class="input-group-text">
+             <i class="fa-solid fa-magnifying-glass">
+             </i>
+            </span>
+            <div class="form-floating">
+             <input class="search form-control" id="search" name="search" placeholder="Search..." type="text" value=""/>
+             <label for="search">
+              Search...
+             </label>
+            </div>
+           </div>
+           <div class="accordion accordion-flush mb-3" id="filters">
+            <div class="filter accordion-item">
+             <h2 class="accordion-header">
+              <button class="accordion-button" data-bs-target="#collpase-0" data-bs-toggle="collapse" type="button">
+               Category
+              </button>
+             </h2>
+             <div class="filter-values accordion-collapse collapse show" id="collpase-0">
+              <div class="accordion-body">
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="Accent Tables"/>
+                <label class="form-check-label" for="filter_Category">
+                 Accent Tables (2)
+                </label>
+               </div>
+               <div class="form-check">
+                <input checked="" class="form-check-input" name="filter_Category" type="checkbox" value="BARSTOOLS"/>
+                <label class="form-check-label" for="filter_Category">
+                 BARSTOOLS (24)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="BEDS"/>
+                <label class="form-check-label" for="filter_Category">
+                 BEDS (41)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="BENCHES"/>
+                <label class="form-check-label" for="filter_Category">
+                 BENCHES (5)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="Chairs"/>
+                <label class="form-check-label" for="filter_Category">
+                 Chairs (17)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="Fabric"/>
+                <label class="form-check-label" for="filter_Category">
+                 Fabric (120)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="In Stock Program"/>
+                <label class="form-check-label" for="filter_Category">
+                 In Stock Program (11)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="Leg Finish"/>
+                <label class="form-check-label" for="filter_Category">
+                 Leg Finish (8)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="Nail Finishes"/>
+                <label class="form-check-label" for="filter_Category">
+                 Nail Finishes (1)
+                </label>
+               </div>
+               <div class="form-check">
+                <input class="form-check-input" name="filter_Category" type="checkbox" value="Parsons Chairs"/>
+                <label class="form-check-label" for="filter_Category">
+                 Parsons Chairs (40)
+                </label>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="filter accordion-item">
+             <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-target="#collpase-1" data-bs-toggle="collapse" type="button">
+               Collection
+              </button>
+             </h2>
+             <div class="filter-values accordion-collapse collapse" id="collpase-1">
+              <div class="accordion-body">
+              </div>
+             </div>
+            </div>
+           </div>
+           <button class="btn btn-outline-primary" id="clear-filters" type="button">
+            Clear Filters
+           </button>
+           <input id="filter-form-submit" style="display: none;" type="submit"/>
+          </form>
+         </div>
+         <div class="col-xs-12 col-sm-6 col-lg-8 col-xl-9">
+          <div class="mb-3">
+           <div class="ChicagoBreadCrumbs">
+            <a class="chicago_bread_home" href="/">
+             Home
+            </a>
+            »
+            <a class="chicago_bread_all_prod" href="/catalog">
+             All Products
+            </a>
+            <span class="chicago_bread_filters">
+             »
+             <a href="/catalog?filter_Category=BARSTOOLS">
+              Category "BARSTOOLS"
+             </a>
+            </span>
+           </div>
+          </div>
+          <div id="filters-loading">
+           <i class="fa-solid fa-spinner fa-spin fa-4x">
+           </i>
+          </div>
+          <div id="filters-loaded">
+           <div class="row justify-content-between mb-3" id="sorting-container">
+            <div class="col-auto" id="pagination-description-top-container">
+             <span id="pagination-description-top">
+              Showing (1 - 24) of 24
+             </span>
+            </div>
+            <div class="col-auto" id="sort-dropdown-container">
+             <select form="filter-form" id="sort-dropdown" name="sortId">
+              <option selected="selected" value="Recommended">
+               Recommended
+              </option>
+              <option value="NameAscending">
+               Name (A-Z)
+              </option>
+              <option value="NameDescending">
+               Name (Z-A)
+              </option>
+             </select>
+            </div>
+           </div>
+           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4 g-4 mb-3">
+            <div class="col">
+             <a class="page tile" href="/catalog/products/larger-scale-straight-top-stool?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/16580/9b5a3cebdc7bb14c218aed12ef51a2a2c6243b85f82f42/504-24-30WCT%20Nomad%20Snow.jpeg">
+               </img>
+              </div>
+              <h3 class="title">
+               504-24 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                504-24
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/larger-straight-top-barstool-with-small-nails-on-inside-back?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/16580/9b5a3cebdc7bb14c218aed12ef51a2a2c6243b85f82f42/504-24-30WCT%20Nomad%20Snow.jpeg"/>
+              </div>
+              <h3 class="title">
+               504-24SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                504-24SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/large-scale-straight-top-stool?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/16580/9b5a3cebdc7bb14c218aed12ef51a2a2c6243b85f82f42/504-24-30WCT%20Nomad%20Snow.jpeg"/>
+              </div>
+              <h3 class="title">
+               504-30 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                504-30
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/larger-scale-straight-top-barstool-with-small-nails-on-inside-back?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/16580/9b5a3cebdc7bb14c218aed12ef51a2a2c6243b85f82f42/504-24-30WCT%20Nomad%20Snow.jpeg"/>
+              </div>
+              <h3 class="title">
+               504-30sn BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                504-30SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/straight-top-barstool-24-barstools-have-a-seat-height-of-26-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/5342/8de45df11dfbaf5b5d163c12bb7b78a4cc242fc551f4fc/804-24AG%20Monte%20Carlo%20Husky.JPG"/>
+              </div>
+              <h3 class="title">
+               804-24 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                804-24
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/straight-top-barstool-with-small-nails-24-barstools-have-a-seat-height-of-26-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/6942/eaa1f772d18823f5cf9de5f07b8d554d90efec5257b448bb/804-24AGSN%20Erwin%20Marine.JPG"/>
+              </div>
+              <h3 class="title">
+               804-24SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                804-24SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/straight-top-barstool-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/2243/ece890c5dcc9331347832a30fcb124cfe0dc465b8ae196/80430%20-%20Copy.jpg"/>
+              </div>
+              <h3 class="title">
+               804-30 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                804-30
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/straight-top-barstool-with-small-nails-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/2781/f5bd7f1b3277a0e2625e9c14652a2decdc6d81c8838764f/804-30SN.jpg"/>
+              </div>
+              <h3 class="title">
+               804-30SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                804-30SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/roll-back-24-barstools-have-a-seat-height-of-26-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/2215/7ac61c1fce3d63208e378234bd1ee97b62b31b8ec3d4af23/806-24.jpg"/>
+              </div>
+              <h3 class="title">
+               806-24 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                806-24
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/roll-back-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/6954/eb9e1f63d72bc2d7f135cefba1e4d92e5941d8330215364/806-30GW%20Dierdre%20teal.JPG"/>
+              </div>
+              <h3 class="title">
+               806-30 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                806-30
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/camel-top-barstool-24-barstools-have-a-seat-height-of-26-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/2176/ea491487ed1631f5646db4a71a6cbf794c35e655d5ecbf3/815-24-30A.JPG"/>
+              </div>
+              <h3 class="title">
+               815-24 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                815-24
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/camel-top-barstool-with-small-nails-24-barstools-have-a-seat-height-of-26-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/4373/1414a392d7d45f84982652b168fbbf14da928d456792e847/815-24AGSN%20Grande%20Blue.JPG"/>
+              </div>
+              <h3 class="title">
+               815-24SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                815-24SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/camel-top-barstool-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/2219/483d5725794d13901baf643c5393a4fb526b8df1247abc/815-24AG%20Tess%20Bluefin.JPG"/>
+              </div>
+              <h3 class="title">
+               815-30 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                815-30
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/camel-top-barstool-with-small-nails-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/6971/463a42d25b9f918878062ac9baab2bbd64d2e10587c185/815-30GWSN%20Sugar%20Shack%20Glacier.JPG"/>
+              </div>
+              <h3 class="title">
+               815-30SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                815-30SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/open-back-barstool-with-black-nickel-nails-24-barstools-have-a-seat-height-of-26-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/7681/5b6964aa567fa5c9917686be2365ccec585664a92e23c7/876-24sn.JPG"/>
+              </div>
+              <h3 class="title">
+               877-24 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                877-24SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/open-back-barstool-with-black-nickel-nails-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/7681/5b6964aa567fa5c9917686be2365ccec585664a92e23c7/876-24sn.JPG"/>
+              </div>
+              <h3 class="title">
+               877-30 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                877-30SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/shorter-back-barstool-24?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/7058/2deb18696cc933cc946c07fa8a22ca8ef9a423d9775b645/885-24GW%20Romero%20Mojave.JPG"/>
+              </div>
+              <h3 class="title">
+               885-24 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                885-24
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/shorter-back-barstool-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/4436/a86bf58bec48b1b8207e2698857f7813be541cc0a37/885-24C%20Grande%20Dune.JPG"/>
+              </div>
+              <h3 class="title">
+               885-30 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                885-30
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/large-scale-curved-back-wing-style-barstool-with-decorative-nails-wood-legs?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/10248/d937f6837ba95453cc9e43f47f896feaf779df97898da99/887-30AG%20CONVERSATION%20IVORY.JPG"/>
+              </div>
+              <h3 class="title">
+               887-24SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                887-24SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/large-scale-curved-back-wing-style-barstool-with-decorative-nails-wood-legs-1?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/7061/99d5a4f42c42b43789fd34ccc8befaf0ff7938dd39f2d3/887-30AG%20Dierdre%20Cream.JPG"/>
+              </div>
+              <h3 class="title">
+               887-30SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                887-30SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/small-wing-style-barstool?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/10151/9af680ae3c28086dffd3ded75f4c9adf93244cdd93dee2/994-24AG%20Conversation%20Smoke%20a.JPG"/>
+              </div>
+              <h3 class="title">
+               994-24 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                994-24
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/small-nails-on-outside-of-wing-24-barstools-have-a-seat-height-of-26-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/10151/9af680ae3c28086dffd3ded75f4c9adf93244cdd93dee2/994-24AG%20Conversation%20Smoke%20a.JPG"/>
+              </div>
+              <h3 class="title">
+               994-24SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                994-24SN
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/10151/9af680ae3c28086dffd3ded75f4c9adf93244cdd93dee2/994-24AG%20Conversation%20Smoke%20a.JPG"/>
+              </div>
+              <h3 class="title">
+               994-30 BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                994-30
+               </li>
+              </ul>
+             </a>
+            </div>
+            <div class="col">
+             <a class="page tile" href="/catalog/products/small-nails-on-outside-of-wing-30-barstools-have-a-seat-height-of-30-when-measured?filter_Category=BARSTOOLS">
+              <div class="image-container">
+               <img class="image" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/400/400/10151/9af680ae3c28086dffd3ded75f4c9adf93244cdd93dee2/994-24AG%20Conversation%20Smoke%20a.JPG"/>
+              </div>
+              <h3 class="title">
+               994-30SN BARSTOOLS
+              </h3>
+              <ul class="values">
+               <li class="value">
+                994-30SN
+               </li>
+              </ul>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </link>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <div class="container-fluid">
+   <footer class="row py-3 mt-3">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-2">
+     <!-- Socila Links -->
+     <div class="col align-self-center">
+      <ul class="list-inline mb-0">
+       <li class="list-inline-item">
+        <a class="" href="/" target="_self">
+         Home
+        </a>
+       </li>
+       <li class="list-inline-item">
+        <a class="" href="/about.html" target="_self">
+         About
+        </a>
+       </li>
+       <li class="list-inline-item">
+        <a class="" href="/catalog">
+         Products
+        </a>
+       </li>
+       <li class="list-inline-item">
+        <a class="" href="/contact.html" target="_self">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <!--Start Admin Footer Nav -->
+     <div class="col text-end align-self-center">
+      <a class="footer-logo" href="/">
+       <img alt="HB Designs Logo" class="logo img-fluid" id="logo" src="https://d28fw8vtnbt3jx.cloudfront.net/get_photo_signed/1/109182/0/0/21886/1dcdc216ec3a5ae813d2d09317fb8f967b7f8a169df14/amptab_logo.jpg"/>
+      </a>
+     </div>
+    </div>
+   </footer>
+   <div class="row bg-secondary pt-4">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-2">
+     <p class="text-white">
+      ©
+      <span class="text-light">
+       HB Designs
+       <script>
+        document.write(new Date().getFullYear())
+       </script>
+       .
+      </span>
+      All rights reserved.
+      <a alt="Privacy Policy" class="privacy text-light" href="/privacy.html">
+       Privacy Policy
+      </a>
+     </p>
+     <p>
+      <a alt="AMP Website" class="text-light" href="http://amptab.com" target="_blank">
+       Powered By AMPTAB
+      </a>
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- Bootstrap core JS-->
+  <script crossorigin="anonymous" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
+  </script>
+  <!-- Theme JS-->
+  <script src="/js/scripts.js">
+  </script>
+  <!-- Support JS-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js">
+  </script>
+  <script src="/js/wow.min.js">
+  </script>
+  <script>
+   new WOW().init();
+  </script>
+ </body>
+</html>
+<link href="/css/darkblue.css" rel="stylesheet"/>
