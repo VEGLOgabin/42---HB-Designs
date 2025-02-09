@@ -299,9 +299,9 @@ def run_spiders():
 
     process = CrawlerProcess()
 
-    # process.crawl(CollectionSpider)
+    process.crawl(CollectionSpider)
 
-    # process.crawl(CollectionSpiderUpgrade)
+    process.crawl(CollectionSpiderUpgrade)
     process.crawl(ProductSpider)
     process.start()
 
