@@ -290,19 +290,48 @@ class ProductSpider(scrapy.Spider):
     
 #   -----------------------------------------------------------Run------------------------------------------------------------------------
 
-def run_spiders():
+# def run_spiders():
 
     
 
+#     output_dir = 'utilities'
+#     os.makedirs(output_dir, exist_ok=True)
+
+#     process = CrawlerProcess()
+
+#     process.crawl(CollectionSpider)
+
+#     process.crawl(CollectionSpiderUpgrade)
+#     process.crawl(ProductSpider)
+#     process.start()
+
+
+# run_spiders()
+
+def run_spiders():
     output_dir = 'utilities'
     os.makedirs(output_dir, exist_ok=True)
-
     process = CrawlerProcess()
+
+    def run_collection_spider():
+        process.crawl(CollectionSpider)
+
+    def run_collection_upgrade_spider():
+        process.crawl(CollectionSpiderUpgrade)
+
+    def run_product_spider():
+        process.crawl(ProductSpider)
+
+    def spider_closed(spider, reason):
+        if isinstance(spider, CollectionSpider):
+            run_collection_upgrade_spider()
+        elif isinstance(spider, CollectionSpiderUpgrade):
+            run_product_spider()
+
+    dispatcher.connect(spider_closed, signal=signals.spider_closed)
 
     process.crawl(CollectionSpider)
 
-    process.crawl(CollectionSpiderUpgrade)
-    process.crawl(ProductSpider)
     process.start()
 
 
