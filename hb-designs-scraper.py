@@ -72,7 +72,7 @@ class CollectionSpider(scrapy.Spider):
             yield {
                 'category_name': response.meta['category_name'],
                 'collection_name': response.meta['collection_name'],
-                'product_link': link
+                'collection_link': link
             }
             
         current_index = response.meta['collection_index']
@@ -90,7 +90,7 @@ class CollectionSpider(scrapy.Spider):
 
 
 class CollectionSpiderUpgrade(scrapy.Spider):
-    name = 'collection_spider'
+    name = 'collection_spider_upgrade'
     
     custom_settings = {
         'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
@@ -290,49 +290,34 @@ class ProductSpider(scrapy.Spider):
     
 #   -----------------------------------------------------------Run------------------------------------------------------------------------
 
-# def run_spiders():
 
-    
+class SpiderRunner:
+    def __init__(self):
+        self.process = CrawlerProcess()
+        self.spiders = [CollectionSpider, CollectionSpiderUpgrade, ProductSpider]
+        self.current_index = 0
 
-#     output_dir = 'utilities'
-#     os.makedirs(output_dir, exist_ok=True)
+        # Connect dispatcher to listen for the spider_closed signal
+        dispatcher.connect(self.spider_closed, signal=signals.spider_closed)
 
-#     process = CrawlerProcess()
+    def start_next_spider(self):
+        if self.current_index < len(self.spiders):
+            spider = self.spiders[self.current_index]
+            self.current_index += 1
+            print(f"Starting spider: {spider.name}")
+            self.process.crawl(spider)
+        else:
+            print("All spiders completed.")
+            self.process.stop()
 
-#     process.crawl(CollectionSpider)
+    def spider_closed(self, spider, reason):
+        print(f"Spider {spider.name} finished: {reason}")
+        self.start_next_spider()
 
-#     process.crawl(CollectionSpiderUpgrade)
-#     process.crawl(ProductSpider)
-#     process.start()
+    def run(self):
+        os.makedirs('utilities', exist_ok=True)
+        self.start_next_spider()
+        self.process.start()
 
-
-# run_spiders()
-
-def run_spiders():
-    output_dir = 'utilities'
-    os.makedirs(output_dir, exist_ok=True)
-    process = CrawlerProcess()
-
-    def run_collection_spider():
-        process.crawl(CollectionSpider)
-
-    def run_collection_upgrade_spider():
-        process.crawl(CollectionSpiderUpgrade)
-
-    def run_product_spider():
-        process.crawl(ProductSpider)
-
-    def spider_closed(spider, reason):
-        if isinstance(spider, CollectionSpider):
-            run_collection_upgrade_spider()
-        elif isinstance(spider, CollectionSpiderUpgrade):
-            run_product_spider()
-
-    dispatcher.connect(spider_closed, signal=signals.spider_closed)
-
-    process.crawl(CollectionSpider)
-
-    process.start()
-
-
-run_spiders()
+runner = SpiderRunner()
+runner.run()
